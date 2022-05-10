@@ -1,0 +1,48 @@
+:root {
+    --font-color: rgb(223, 215, 215);
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-dark: rgba(0, 0, 0, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: solid black 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    border: solid pink 1px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    border: solid blue 1px;
+}
+
+.menu {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
