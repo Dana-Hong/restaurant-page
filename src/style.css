@@ -16,8 +16,14 @@
 }
 
 body {
+    height: 100vh;
+    width: 100%;
+    border: solid purple 2px;
     background: white;
     color: black;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    font-family: 'Comfortaa', cursive;
 }
 
 /* Header */
@@ -25,6 +31,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     border: solid black 1px;
 }
@@ -42,7 +49,69 @@ ul {
     border: solid blue 1px;
 }
 
+/* Main */
+
+/* Menu */
+
 .menu {
+    height: 100%;
+    background-color: rgb(20, 20, 20);
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 40rem;
+    gap: 2rem;
+
+}
+
+.menu-item {
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgb(233, 199, 49);
+    width: 100%;
+    background: rgb(26, 26, 26);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu-item > h2 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.item-img-container {
+    border-radius: 2rem;
+    background: rgba(27, 27, 27, 0.6);
+    height: 300px;
+    width: 300px;
+    align-self: center;
+}
+
+img {
+    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-item-description {
+    font-size: 1.25rem;
+    padding: 1rem;
+    align-self: center;
+}
+
+.menu-item-price {
+    font-size: 1.25rem;
+    /* padding: 0 0 1rem 0; */
+    align-self: center;
+    text-align: center;
+
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
 }
