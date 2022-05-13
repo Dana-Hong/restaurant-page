@@ -2,7 +2,7 @@ import { home } from "./home";
 import { menu } from "./menu";
 import { about } from "./about";
 import shioImage from './imgs/shio.png';
-import shoyuImage from './imgs/shoyu2.png';
+import shoyuImage from './imgs/shoyu.png';
 import misoImage from './imgs/miso.png';
 import tsukemenImage from './imgs/tsukemen.jpeg';
 import tonkotsuImage from "./imgs/tonkotsu.jpg";
