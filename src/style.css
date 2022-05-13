@@ -1,10 +1,14 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('./fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 :root {
-    --font-color: rgb(223, 215, 215);
-    --font-color-dark: #aaa;
+    --font-color: rgb(255, 255, 255);
     --border-color: #222;
-    --background-light: rgba(0, 0, 0, 0.6);
-    --background-light-hover: rgba(99, 99, 99, 0.4);
-    --background-dark: rgba(0, 0, 0, 0.9);
+    --background-dark: rgba(17, 17, 17, 1);
 }
 
 *,
@@ -18,17 +22,16 @@
 body {
     height: 100vh;
     width: 100%;
-    border: solid purple 2px;
-    background: white;
-    color: black;
+    background: var(--background-dark);
+    color: var(--font-color);
     display: grid;
     grid-template-rows: 1fr 10fr 1fr;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comforrta';
 }
 
 /* Header */
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,19 +42,58 @@ body {
 nav {
     display: flex;
     align-items: center;
-    border: solid pink 1px;
+    margin: 0 3rem 0 0;
 }
 
 ul {
     display: flex;
     list-style: none;
-    gap: 1rem;
-    border: solid blue 1px;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.current {
+    text-decoration: underline;
 }
 
 /* Main */
 
+/* Hero */
+
+.home-page {
+    height: 100%;
+    position: relative;
+}
+
+.home-hero {
+    background: url('imgs/hero1.gif');
+    background-size: cover;
+    filter: blur(5px);
+    box-shadow: 0 2px 1rem (black);
+    height: 100%;
+}
+
+.home-header {
+    background-color: rgba(0,0,0, 0.4);
+    width: 20rem;
+    padding: 20rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    z-index: 100;
+}
+
 /* Menu */
+
+main {
+    background-color: rgb(20, 20, 20);
+}
 
 .menu {
     height: 100%;
@@ -59,19 +101,29 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem 40rem;
-    gap: 2rem;
+    gap: 1.5rem;
 
 }
 
+.menu-heading {
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+}
+
 .menu-item {
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem rgb(233, 199, 49);
+    border-radius: 1rem;
+    height: 100%;
     width: 100%;
     background: rgb(26, 26, 26);
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.menu-item:hover {
+    box-shadow: 0 0 1rem rgb(233, 199, 49);
+    
 }
 
 .menu-item > h2 {
@@ -82,8 +134,8 @@ ul {
 .item-img-container {
     border-radius: 2rem;
     background: rgba(27, 27, 27, 0.6);
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     align-self: center;
 }
 
@@ -107,11 +159,49 @@ img {
 
 }
 
+/* About */
+
+.about-page {
+    height: 100%;
+}
+
+.about-hero {
+    height: 100%;
+    background: url('./imgs/about-cover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    font-family: 'Comfortaa';
+
+}
+
+.about-heading {
+    color: white;
+    padding: 1rem;
+    font-size: 3rem;
+    width: 50%;
+}
+
+.about-text {
+    width: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
 /* Footer */
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(48, 48, 48);
+    background-color: var(--background-dark);
+}
+
+.icon {
+    width: 2rem;
 }

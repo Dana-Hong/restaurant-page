@@ -1,7 +1,13 @@
+import { navList, footer } from "./data";
 import { loadHeader } from "./header";
 import { loadFooter } from "./footer";
-import loadAboutPage from "./about";
+import { home } from "./home";
+import './style.css';
+// import { loadFooter } from "./footer";
+// import { menu } from "./menu";
+// import { about } from "./about";
+// import { ramenTypes } from "./data"
 
-loadHeader();
-loadAboutPage();
-loadFooter();
+loadHeader(navList);
+home.initialLoad();
+loadFooter(footer);
